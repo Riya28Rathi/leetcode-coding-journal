@@ -60,9 +60,9 @@ class Solution {
             Arrays.sort(sortedArr);
             int rank=1;
 
-            for(int i=0;i<sortedArr.length;i++){
-                if(!map.containsKey(sortedArr[i])){
-                    map.put(sortedArr[i],rank);
+            for(int num:sortedArr){
+                if(!map.containsKey(num)){
+                    map.put(num,rank);
                     rank++;
                 }
             }
