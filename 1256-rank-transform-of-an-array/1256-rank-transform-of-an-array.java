@@ -56,7 +56,7 @@ class Solution {
 
             HashMap<Integer,Integer> map=new HashMap<>();
 
-            int[] sortedArr=Arrays.copyOf(arr, arr.length);
+            int[] sortedArr=arr.clone();
             Arrays.sort(sortedArr);
             int rank=1;
 
