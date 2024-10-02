@@ -51,7 +51,7 @@ class Solution {
         public int[] arrayRankTransform(int[] arr) {
 
             if(arr == null || arr.length==0){
-                return new int[0];
+                return arr;
             }
 
             HashMap<Integer,Integer> map=new HashMap<>();
