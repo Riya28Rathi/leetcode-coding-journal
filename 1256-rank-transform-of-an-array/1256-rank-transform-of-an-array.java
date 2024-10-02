@@ -50,8 +50,8 @@ class Solution {
 
         public int[] arrayRankTransform(int[] arr) {
 
-            if(arr.length==0){
-                return arr;
+            if(arr == null || arr.length==0){
+                return new int[0];
             }
 
             HashMap<Integer,Integer> map=new HashMap<>();
