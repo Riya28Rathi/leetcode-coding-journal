@@ -1,4 +1,6 @@
 class Solution {
+
+    // method1============================================================
     // public int[] arrayRankTransform(int[] arr) {
 
     //     if(arr.length==0){
@@ -54,7 +56,7 @@ class Solution {
 
             HashMap<Integer,Integer> map=new HashMap<>();
 
-            int[] sortedArr=arr.clone();
+            int[] sortedArr=Arrays.copyOf(arr, arr.length);
             Arrays.sort(sortedArr);
             int rank=1;
 
