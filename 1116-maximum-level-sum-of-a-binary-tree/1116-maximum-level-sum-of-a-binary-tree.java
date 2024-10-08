@@ -75,61 +75,114 @@ class Solution {
     // }
 
 
-    public int maxLevelSum(TreeNode root) {
-        if(root == null){
-            return -1;
-        }
+    // public int maxLevelSum(TreeNode root) {
+    //     if(root == null){
+    //         return -1;
+    //     }
         
 
-            int max=Integer.MIN_VALUE;
+    //         int max=Integer.MIN_VALUE;
+    //         int maxKey=0;
+    //         // HashMap<Integer, Integer> maxMap=new HashMap<>();
+    //         int count=1;
+            
+    //         Queue<TreeNode> parent = new LinkedList();
+    //         Queue<TreeNode> child = new LinkedList();
+
+    //         parent.add(root);
+
+    //         while(!parent.isEmpty() || !child.isEmpty()){
+
+    //             if(parent.isEmpty()){
+    //                 parent.addAll(child); // Copy all elements
+
+    //                 // Clear the original stack
+    //                 child.clear();
+
+    //             } 
+
+    //             int temp=0;
+    //             while(!parent.isEmpty()){
+
+    //                 TreeNode node=parent.poll();
+    //                 temp+=node.val;
+    //                 if(node.left != null){
+    //                     child.add(node.left);
+    //                 }
+    //                 if(node.right != null){
+    //                     child.add(node.right);
+    //                 }
+                    
+
+    //             }
+    //             // max=Math.max(max, temp);
+    //             System.out.println("max:  "+ max);
+    //             System.out.println("temp:  "+ temp);
+    //             if(temp> max){
+    //                 max=temp;
+    //                 maxKey=count;
+    //             }
+    //             // maxMap.put(count,temp);
+    //             count++;
+
+    //         }
+
+
+
+    //         return maxKey;
+        
+
+        
+    // }
+
+
+        public int maxLevelSum(TreeNode root) {
+            if(root == null){
+                return -1;
+            }
+            
+
+            
             int maxKey=0;
             // HashMap<Integer, Integer> maxMap=new HashMap<>();
             int count=1;
+
             
             Queue<TreeNode> parent = new LinkedList();
-            Queue<TreeNode> child = new LinkedList();
+           int result=Integer.MIN_VALUE;
 
             parent.add(root);
 
-            while(!parent.isEmpty() || !child.isEmpty()){
+            while(!parent.isEmpty()){
 
-                if(parent.isEmpty()){
-                    parent.addAll(child); // Copy all elements
-
-                    // Clear the original stack
-                    child.clear();
-
-                } 
-
-                int temp=0;
-                while(!parent.isEmpty()){
-
+                int size=parent.size();
+                int currSum=0;
+                while(size>0){
                     TreeNode node=parent.poll();
-                    temp+=node.val;
+
+                    currSum+=node.val;
                     if(node.left != null){
-                        child.add(node.left);
+                        parent.add(node.left);
                     }
                     if(node.right != null){
-                        child.add(node.right);
+                        parent.add(node.right);
                     }
-                    
+
+                    size--;
 
                 }
-                // max=Math.max(max, temp);
-                System.out.println("max:  "+ max);
-                System.out.println("temp:  "+ temp);
-                if(temp> max){
-                    max=temp;
+
+                if(currSum > result){
+                    result=currSum;
                     maxKey=count;
                 }
-                // maxMap.put(count,temp);
-                count++;
 
+                count++;
             }
 
 
-
             return maxKey;
+
         
 
         
