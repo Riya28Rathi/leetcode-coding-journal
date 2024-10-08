@@ -26,4 +26,20 @@ A collection of LeetCode questions to ace the coding interview! - Created using 
 |  |
 | ------- |
 | [2236-maximum-twin-sum-of-a-linked-list](https://github.com/Riya28Rathi/leetcode-coding-journal/tree/master/2236-maximum-twin-sum-of-a-linked-list) |
+## Tree
+|  |
+| ------- |
+| [1116-maximum-level-sum-of-a-binary-tree](https://github.com/Riya28Rathi/leetcode-coding-journal/tree/master/1116-maximum-level-sum-of-a-binary-tree) |
+## Depth-First Search
+|  |
+| ------- |
+| [1116-maximum-level-sum-of-a-binary-tree](https://github.com/Riya28Rathi/leetcode-coding-journal/tree/master/1116-maximum-level-sum-of-a-binary-tree) |
+## Breadth-First Search
+|  |
+| ------- |
+| [1116-maximum-level-sum-of-a-binary-tree](https://github.com/Riya28Rathi/leetcode-coding-journal/tree/master/1116-maximum-level-sum-of-a-binary-tree) |
+## Binary Tree
+|  |
+| ------- |
+| [1116-maximum-level-sum-of-a-binary-tree](https://github.com/Riya28Rathi/leetcode-coding-journal/tree/master/1116-maximum-level-sum-of-a-binary-tree) |
 <!---LeetCode Topics End-->
