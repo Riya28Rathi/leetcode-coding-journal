@@ -23,11 +23,9 @@ class Solution {
         int maxKey=0;
         // HashMap<Integer, Integer> maxMap=new HashMap<>();
         int count=1;
-        // Stack<TreeNode> parent=new LinkedList<>();
-        // Stack<TreeNode> child=new LinkedList<>();
-
-        LinkedList<TreeNode> parent = new LinkedList<>();
-        LinkedList<TreeNode> child = new LinkedList<>();
+        
+        Stack<TreeNode> parent = new Stack<>();
+        Stack<TreeNode> child = new Stack<>();
 
         parent.push(root);
 
